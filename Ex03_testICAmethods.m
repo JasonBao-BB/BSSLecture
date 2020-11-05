@@ -16,32 +16,10 @@ clc
 clear
 close all
 
-example = 3;
-switch example
-    case 1 % A sample EEG from the OSET package
-        load EEGdata textdata data % Load a sample EEG signal
-        fs = 250;
-        x = data'; % make the data in (channels x samples) format
-        % Check the channel names
-        disp(textdata)
-    case 2 % A sample ECG from the OSET package
-        load SampleECG2 data % Load a sample ECG signal
-        fs = 1000;
-        x = data(:, 2:end)'; % make the data in (channels x samples) format
-        x = x - LPFilter(x, 1.0/fs); % remove the lowpass baseline
-    case 3 % A synthetic signal
-        fs = 500;
-        len = round(3.0*fs);
-        s1 = sin(2*pi*7.0/fs * (1 : len));
-        s2 = 2*sin(2*pi*1.3/fs * (1 : len) + pi/7);
-        period = 76.0;
-        s3 = (mod(1:len, 76.0) - period/2)/(period/2);
-        A = rand(3);
-        noise = 0.01*randn(3, len);
-        x = A * [s1 ; s2 ; s3] + noise;
-    otherwise
-        error('unknown example');
-end
+load EEGdata textdata data % Load a sample EEG signal
+fs = 500;
+x = data';
+disp(textdata)
 
 N = size(x, 1); % The number of channels
 T = size(x, 2); % The number of samples per channel
@@ -50,8 +28,11 @@ T = size(x, 2); % The number of samples per channel
 PlotECG(x, 4, 'b', fs, 'Raw data channels');
 
 % Run fastica
-approach = 'symm'; % 'symm' or 'defl'
-g = 'tanh'; % 'pow3', 'tanh', 'gauss', 'skew'
+% Choose from two approaches symmetric or defletion
+% extract few number of component, deflect is good than symmetric 
+approach = 'defl'; % 'symm' or 'defl'
+% parameter for non-linearty 
+g = 'gauss'; % 'pow3', 'tanh', 'gauss', 'skew'
 lastEigfastica = N; % PCA stage
 numOfIC = N; % ICA stage
 interactivePCA = 'off';

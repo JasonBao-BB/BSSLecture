@@ -16,18 +16,10 @@ clc
 clear
 close all
 
-example = 1;
-switch example
-    case 1 % A sample EEG from the OSET package
-        load EEGdata textdata data % Load a sample EEG signal
-        fs = 250;
-        x = data'; % make the data in (channels x samples) format
-        % Check the channel names
-        disp(textdata)
-    otherwise
-        error('unknown example');
-end
-
+load EEGdata textdata data % Load a sample EEG signal
+fs = 500;
+x = data'; % make the data in (channels x samples) format
+disp(textdata)
 N = size(x, 1); % The number of channels
 T = size(x, 2); % The number of samples per channel
 t = (0 : T - 1)/fs;

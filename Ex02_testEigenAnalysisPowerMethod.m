@@ -17,18 +17,23 @@ clear
 clc;
 
 % Build a random signal
-N = 3;
-T = 1000;
+N = 5;
+T = 500;
+% Generate a random 1 x n normally distribute numbers
 a = randn(1, N);
+% Get a matrix
 x = diag(a) * randn(N, T);
 % Cx = x * x';
+% calculate the covariance of x'
 Cx = cov(x');
 
 % Apply eigenvalue decomposition
 % Read 'eig' help and compare with 'eigs'
+% V is eigvalue
+% D is eigvector
 [V,D] = eig(Cx)
 
-Itr = 100; % The number of power method iterations
+Itr = 50; % The number of power method iterations
 
 v0 = rand(N, 1);
 v1 = EigenAnalysisPowerMethod(Cx, v0, Itr);
