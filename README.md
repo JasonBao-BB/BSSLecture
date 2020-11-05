@@ -8,13 +8,13 @@
 
 #### Part A
 
-![](/Users/boyangbao/Documents/GitHub/BSSLecture/Screen Shot 2020-11-04 at 10.41.21 AM.png)
+![](https://github.com/JasonBao-BB/BSSLecture/blob/main/Screen%20Shot%202020-11-04%20at%2010.41.21%20AM.png)
 
-![Screen Shot 2020-11-04 at 10.42.07 AM](/Users/boyangbao/Documents/GitHub/BSSLecture/Screen Shot 2020-11-04 at 10.42.07 AM.png)
+![Screen Shot 2020-11-04 at 10.42.07 AM](https://github.com/JasonBao-BB/BSSLecture/blob/main/Screen%20Shot%202020-11-04%20at%2010.42.07%20AM.png)
 
 #### Part B
 
-![1_Part_b](/Users/boyangbao/Documents/GitHub/BSSLecture/1_Part_b.png)
+![1_Part_b](https://github.com/JasonBao-BB/BSSLecture/blob/main/1_Part_b.png)
 
 We use eig function to calculate the Eigenvalues and Eigenvector, as you can see, the result from eig function is same like hands calculate results.
 
@@ -24,11 +24,11 @@ We use eig function to calculate the Eigenvalues and Eigenvector, as you can see
 
 #### Part A
 
-![Screen Shot 2020-11-04 at 1.59.45 PM](/Users/boyangbao/Documents/GitHub/BSSLecture/Screen Shot 2020-11-04 at 1.59.45 PM.png)
+![Screen Shot 2020-11-04 at 1.59.45 PM](https://github.com/JasonBao-BB/BSSLecture/blob/main/Screen%20Shot%202020-11-04%20at%201.59.45%20PM.png)
 
 #### Part B
 
-![vectors](/Users/boyangbao/Documents/GitHub/BSSLecture/vectors.png)
+![vectors](https://github.com/JasonBao-BB/BSSLecture/blob/main/vectors.png)
 
 ![values](https://github.com/JasonBao-BB/BSSLecture/blob/main/values.png)
 
