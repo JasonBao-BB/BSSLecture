@@ -30,7 +30,7 @@ We use eig function to calculate the Eigenvalues and Eigenvector, as you can see
 
 ![vectors](/Users/boyangbao/Documents/GitHub/BSSLecture/vectors.png)
 
-![values](github.com/JasonBao-BB/BSSLecture/blob/main/values.png)
+![values](https://github.com/JasonBao-BB/BSSLecture/blob/main/values.png)
 
 ***
 
